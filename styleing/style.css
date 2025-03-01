@@ -1,1 +1,94 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    background-color: #111;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px; /* Space for underline */
+}
+
+/* Animated Underline */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: white; /* Neon blue underline */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Active Link */
+nav ul li a.active::after {
+    width: 100%; /* Fully extended underline */
+}
+
+/* Logo Styling */
+.logo-container {
+    margin: 50px auto;
+}
+
+.logo-container img {
+    width: 150px; /* Adjust based on your preference */
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Content Section */
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #111;
+    font-size: 14px;
+}
 
